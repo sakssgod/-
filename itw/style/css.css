@@ -1,0 +1,60 @@
+.游戏框架 {
+    width: 150px; /* Width of the card */
+    height: 200px; /* Height of the card */
+    perspective: 1000px; /* Perspective for 3D effect */
+    display: inline-block; /* Arrange cards side by side */
+    margin: 10px; /* Space between cards */
+  }
+
+  .卡牌框架 {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+    text-align: center;
+  }
+
+  .游戏框架:hover .卡牌框架 {
+    transform: rotateY(180deg); /* Rotate card on hover */
+  }
+
+  .正面, .背面 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Hide the backside of the card when facing away */
+    backface-visibility: hidden;
+  }
+
+  .正面 {
+    background: url('back.jpg'); /* Path to the front image */
+    z-index: 2;
+  }
+
+  .背面 {
+    background: url('1.jpg'); /* Path to the back image */
+    transform: rotateY(180deg);
+  }
+
+#container{
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  margin: 20px;
+  text-align: center;
+  background-color: bisque;
+  padding: 10px;
+  width: 100px;
+  
+}
+img{
+  width: 100%;
+}
+
+.all {
+  background-color: aqua;
+
+}
+
+body{background-color: aqua;}
