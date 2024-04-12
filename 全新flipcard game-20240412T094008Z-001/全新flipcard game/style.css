@@ -1,0 +1,139 @@
+@import url('https://use.fontawesome.com/releases/v5.6.3/css/all.css');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+
+}
+
+
+.空白区块{
+    background-size:cover;
+    height: 20vh;
+    background-color: aqua;
+}
+
+.首页栏区块_可相对或绝对位置{
+    background-size:cover;
+    height: 15vh;
+    background-color: greenyellow;
+}
+
+.游戏框架_区块{
+    background-size:cover;
+    height: 90vh;
+    background-image: url(一致分辨率/1222945.jpg);
+    background-size: cover;
+
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.游戏区域 {
+    width: 60%;
+    height: 69vh;
+    border: 5px solid white;
+    position: relative; top: 10px;
+    padding: 10px;
+    perspective: 1000px; /* Perspective for 3D effect */
+}
+
+
+
+.正面{
+    flex: 1;
+    width: 13%;
+    height: 20%;
+    opacity: 1;
+    margin: 4px;
+}
+
+.反面{
+    flex: 1;
+    width: 13%;
+    height: 20%;
+    opacity: 1;
+    margin: 4px;
+    /* backface-visibility: hidden; */
+    transform: rotateY(180deg);
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.反面:hover{
+    transform: rotateY(180deg);
+}
+
+
+.正面卡牌{
+    position: absolute; bottom:  35px;
+    
+}
+
+.背面卡牌{
+    position: absolute; bottom: 20px;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+.Pre_页尾区块{
+    background-size:cover;
+    height: 10vh;
+    background-color: rgb(204, 0, 255);
+}
+
+
+
+.页尾区块{
+    text-align: center;
+    background-color: rgb(49, 183, 216);
+    padding: 50px;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.社交媒体icon_链接 p{
+    color: rgb(255, 255, 255);
+    
+}
+    
+    .fab{
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    padding: 0 5px;
+    }
+    
+    .fa-facebook:hover{
+    color: #4267b2;
+    }
+    
+    .fa-twitter:hover{
+    color: #56abef;
+    }
+    
+    .fa-github:hover{
+    color: black;
+    }
+    
+    .fa-instagram:hover{
+    color: #e24d51;
+    }
+
+
+
