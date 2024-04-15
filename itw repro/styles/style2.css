@@ -1,0 +1,33 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(一致分辨率/1222945.jpg);
+}
+.site-menu{
+    
+   
+   
+    width: 100%;
+    height: 100vh   
+}   
+nav{
+
+    
+    display: block;
+    height: 100px;
+    width: 100px;
+}
+
+.logo{
+    grid-column : 1/span 6;
+    grid-row: 1;
+}
+
+
+img{
+    width: 100%;
+}
