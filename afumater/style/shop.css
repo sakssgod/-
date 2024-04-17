@@ -78,7 +78,7 @@ li{
     height: 40px;
     border-radius: 20px;
     margin-top: 20px;
-    background: url(../img/cut-diamond.png) left 2px center,linear-gradient(to right, #007bff, #00aaff, #66ccff, #99ddff); /* 设置背景图像和渐变背景颜色 */
+    background: url(../img/333.png) left 2px center,linear-gradient(to right, #007bff, #00aaff, #66ccff, #99ddff); /* 设置背景图像和渐变背景颜色 */
     background-repeat: no-repeat;
     background-size: contain ;
  
