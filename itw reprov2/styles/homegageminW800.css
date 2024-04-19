@@ -144,6 +144,34 @@ nav .menu{
     color: black;
 }
 
+.GameRule{
+    position: relative ;
+    padding: 100px;
+    background-color: #354d8e;
+    z-index: 200px;
+}
+
+.GameRule h2{
+    font-size: 3.5em;
+    color: white;
+    margin-bottom: 10px;
+
+}
+
+.GameRule p{
+    font-size: 1.2em;
+    color: white;
+}
+
+.GameRule::before{
+    
+}
+
+
+
+
+
+
 
 
 
