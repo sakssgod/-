@@ -4,6 +4,7 @@ jiayi li 62244 PL25
 Oujie Wu 62228 PL25
 Adriano Neves 62242 PL21 */
 
+@import url('https://use.fontawesome.com/releases/v5.6.3/css/all.css');
 *{
     margin: 0;
     padding: 0;
@@ -76,6 +77,38 @@ nav .menu{
 .menu-icon {
     display: none; /* 确保菜单图标是隐藏的 */
   }
+
+/* music play */
+embed{
+    visibility: hidden;
+}
+.Music-player{
+    width: 100px;
+    height: 100px;
+    background-image: url(../images/Yosuganosora_package.png);
+    background-size: cover;
+    position: fixed;
+    z-index: 11;
+    bottom: 1%;
+    left: 1%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+    
+.fa-youtube:hover{
+    color: #b7d2fc;
+}
+
+.fab{
+    color: #050d3c;
+    font-size: 40px;
+    padding: 0 5px;
+    }
+
 
 
 .imagem {
