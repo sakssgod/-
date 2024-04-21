@@ -1,0 +1,59 @@
+body{
+    background-image: url(../images/116865176_p0_master1200.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+div.login{
+    margin: 120px auto;
+    width: 300px;
+    height: 400px;
+    text-align: center;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    padding: 8px;
+    box-sizing: border-box;
+
+}
+
+input{
+    background-color: whitesmoke;
+    width: 250px;
+    height: 50px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    border: none;
+    border-bottom: 2px solid silver;
+    outline: none;
+    
+}
+.botao:hover{
+    background-color: blueviolet;
+}
+
+img{
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+button{
+    background-color: aqua;
+    margin-top: 10px;
+    width: 70px;
+    height: 45px;
+    border-radius: 10px;
+    font-weight: 600;
+    color: white;
+    
+}
+button a{
+    text-decoration: none;
+}
+
+button:hover{
+    background-color: brown;
+}
