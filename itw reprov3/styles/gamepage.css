@@ -5,39 +5,106 @@
     box-sizing: border-box;
 }
 
-
-body{
-    background-image: url();
+nav{
+    position: fixed;
+    width: 100%;
+    padding: 10px 0 ;
+    z-index: 10;
+    
 }
 
-.backpart{
-    background-size:cover;
-    height: 20vh;
-    background-color: aqua;
+nav .menu{
+    /* max-width: 1250px; */
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 100px;
+}
+.menu .logo{
+    text-align: left;
+}
+.menu .logo a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.6em;
+    font-weight: 550;
 }
 
-.首页栏区块_可相对或绝对位置{
-    background-size:cover;
-    height: 15vh;
-    background-color: greenyellow;
+.menu ul{
+    display: inline-flex;
+
 }
+
+.menu ul li{
+    list-style: none;
+    margin-left: 1em;
+}
+
+.menu ul li:first-child{
+    margin-left: 0px;
+}
+
+.menu ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0,3 ease;
+    background-color: rgb(80, 77, 78);
+}
+
+.menu ul li a:hover{
+    background-color: white;
+    color: black;
+
+}
+
+.menu-icon {
+    display: none; /* 确保菜单图标是隐藏的 */
+  }
+
+  .imagem {
+    background-image: url(../images/1222945.jpg); /* 确保路径正确，并加上引号 */
+    background-repeat: no-repeat; /* 将no-repeat独立出来 */
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+}
+
+.imagem::before{ /* 蒙版*/
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+
+}
+
+/* game area !*/
+
 
 .gamebackzone{
     background-size:cover;
-    height: 90vh;
-    background-image: url(../images/1222945.jpg);
+    width: 75%;
+    background: none;
     background-size: cover;
-
-    justify-content: center;
-    align-items: center;
     display: flex;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    padding: 0, 20px;
+
 }
 
 .gamezone {
     width: 60%;
     height: 69vh;
     border: 5px solid white;
-    position: relative; top: 10px;
     padding: 10px;
     perspective: 1000px; /* Perspective for 3D effect */
 }
@@ -81,6 +148,8 @@ body{
 
 
 
+
+
 .Pre_页尾区块{
     background-size:cover;
     height: 10vh;
@@ -100,7 +169,7 @@ body{
 
 }
 
-.社交媒体icon_链接 p{
+.MediaIcon p{
     color: rgb(255, 255, 255);
     
 }
