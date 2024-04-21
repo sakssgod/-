@@ -14,7 +14,7 @@ Jiayi Li contribuiu com:
 Login.html
 Login.css
 shop.html
-shop.css
+shopstyle.css
 
 Adriano Neves contribuiu com:
 leaderboard.html
