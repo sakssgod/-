@@ -142,6 +142,11 @@ nav .menu{
     background: none;
 }
 
+.center .buttons button a:first-child:hover{
+    color: white;
+    background: none;
+}
+
 .center .buttons button:last-child{
     color: black;
     background: white;
@@ -244,7 +249,7 @@ nav .menu{
     }
     
     .center .buttons button{
-        font-size: 10px;
+        font-size: 15px;
     }
 
     .GameRule{
