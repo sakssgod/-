@@ -1,0 +1,131 @@
+/* itw-2023/2024
+grupo:06
+jiayi li 62244 PL25
+Oujie Wu 62228 PL25
+Adriano Neves 62242 PL21 */
+
+
+
+
+@media screen and (min-width: 992px) {
+    
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f3f0f3;
+    
+
+}
+li{
+    list-style: none;
+}
+
+.product{
+    margin: 70px auto ;
+    width: 1226px;
+    height: 614px;
+    background-color: #f3f0f3;
+}
+
+.product .left{ 
+    width: 234px;
+    height: 614px;
+    background-color:#fffeff;
+    float: left;
+    
+    background-image: url(../images/jiuniang.jpg);
+    background-repeat: no-repeat;
+    background-size: 105% 65%;
+    text-align: center;
+    
+
+}
+.left h2{
+    position: relative;
+    top: 71%;
+}
+
+
+.product .right{
+    width: 978px;
+    height: 614px;
+    background-color: #f3f0f3;
+    float: right;
+}
+
+.right li{
+    width: 234px;
+    height: 300px;
+    background-color: #fffeff;
+    float: left;
+    margin-right: 14px;
+    margin-bottom: 14px;
+    text-align: center;
+    font-size: 30px;
+    
+}
+
+.right li:nth-child(4n) {
+    margin-right: 0;
+}
+
+.right li .props{
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: 30px auto;
+}
+
+.right li:hover{
+    transform: scale(1.2);
+    transition: transform 0.7s ease;
+
+}
+
+.right li button{
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    margin-top: 20px;
+    background: url(../images/diamante.png) left 2px center,linear-gradient(to right, #007bff, #00aaff, #66ccff, #99ddff); /* 设置背景图像和渐变背景颜色 */
+    background-repeat: no-repeat;
+    background-size: contain ;
+ 
+    
+}
+
+.product .left:hover{
+    transform: scale(1.2);
+    transition: transform 0.7s ease;
+}
+
+nav{
+    
+    position: fixed;
+    top: 10px;
+    right: 10px;
+   
+  
+}
+nav a{
+    text-decoration: none;
+}
+
+nav button{
+
+    width: 75px;
+    height: 45px;
+    border-radius: 10px;
+   
+    
+}
+
+
+    
+}
