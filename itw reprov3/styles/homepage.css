@@ -33,6 +33,7 @@ nav .menu{
     text-decoration: none;
     color: white;
     font-size: 1.6em;
+    font-weight: 550;
 }
 
 .menu ul{
@@ -65,6 +66,11 @@ nav .menu{
     color: black;
 
 }
+
+.menu-icon {
+    display: none; /* 确保菜单图标是隐藏的 */
+  }
+
 
 .imagem {
     background-image: url(../images/1222945.jpg); /* 确保路径正确，并加上引号 */
@@ -166,13 +172,9 @@ nav .menu{
 }
 
 
-@media only screen and (max-width:920px){
-    nav{
-        background-color: rgb(6, 6, 104);
-    }
-    nav .menu{
-        display:inline;
-    }
+@media only screen and (max-width:970px){
+
+
     nav .logo{
         margin: 10px;
     }
@@ -182,7 +184,88 @@ nav .menu{
     div .subtitle{
         font-size: xx-small;
     }
+
+    .normal-menu {
+        display: none; /* 隐藏常规菜单项 */
+      }
+      .menu-icon {
+        display: block; /* 显示菜单图标 */
+        /* 添加你需要的菜单图标样式 */
+        cursor: pointer;
+        /* 其他样式 */
+        color: white;
+        
+      }
+
+      .menu-icon:before {
+        content: "\2630"; /* 汉堡图标的Unicode字符 */
+        font-size: 24px; /* 可根据需要调整字体大小 */
+        /* 为图标添加进一步的样式 */
+      }
+
+      .menu .logo a{
+        position: relative; /* 设置相对定位 */
+        left: -50px; /* 向左移动10px，根据需要调整这个值 */
+    }
+
+    
+    
 }
+
+
+@media only screen and (max-width:600px){
+
+      .menu .logo a{
+        position: relative; /* 设置相对定位 */
+        left: -80px; /* 向左移动10px，根据需要调整这个值 */
+    }
+
+    .menu-icon:before {
+        content: "\2630"; /* 汉堡图标的Unicode字符 */
+        font-size: 24px; /* 可根据需要调整字体大小 */
+        position: relative;
+        right: -50px;
+      }
+    
+      .menu .logo a{
+        font-weight: 300;
+    }
+
+      .center .title{
+        color: white;
+        font-size: 2.3em;
+        font-weight: 300;
+    }
+    
+    .center .subtitle{
+        color: white;
+        font-size: 1.7em;
+        font-weight: 300;
+    }
+    
+    .center .buttons button{
+        font-size: 10px;
+    }
+
+    .GameRule{
+        padding: 50px;
+    }
+
+    .GameRule h2{
+        font-size: 2.3em;
+        color: white;
+        margin-bottom: 10px;
+    
+    }
+    
+    .GameRule p{
+        font-size: 0.9em;
+        color: white;
+    }
+
+
+}
+
 
 
 
