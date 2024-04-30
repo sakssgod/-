@@ -79,9 +79,8 @@ nav .menu{
   }
 
 /* music play */
-embed{
-    visibility: hidden;
-}
+
+
 .Music-player{
     width: 100px;
     height: 100px;
@@ -91,7 +90,6 @@ embed{
     z-index: 11;
     bottom: 1%;
     left: 1%;
-
     display: flex;
     justify-content: center;
     align-items: center;
