@@ -280,3 +280,61 @@ color: #e24d51;
 
 
 }
+
+
+@media only screen and (max-width:970px){
+
+    .GameArea-Center{
+        position: absolute;
+        top: 58%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 20px 0 0 0;
+        background-color:#2b376d;
+        height: 600px;
+        width: 580px;
+        border: 10px ridge rgb(19 33 91);
+        border-radius: 4%;
+        text-align: center; 
+    }
+
+    .imagem {
+        background-image: url(../images/1222945.jpg); /* 确保路径正确，并加上引号 */
+        background-repeat: no-repeat; /* 将no-repeat独立出来 */
+        width: 100%;
+        height: 110vh;
+        position: relative;
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+@media only screen and (max-width:600px){
+
+    .GameArea-Center{
+        position: absolute;
+        top: 58%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 20px 0 0 0;
+        background-color:#2b376d;
+        height: 760px;
+        width: 450px;
+        border: 10px ridge rgb(19 33 91);
+        border-radius: 4%;
+        text-align: center; 
+    }
+
+    .imagem {
+        background-image: url(../images/1222945.jpg); /* 确保路径正确，并加上引号 */
+        background-repeat: no-repeat; /* 将no-repeat独立出来 */
+        width: 100%;
+        height: 120vh;
+        position: relative;
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+
+
