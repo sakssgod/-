@@ -21,7 +21,7 @@ body{
 div.create{
     margin: 120px auto;
     width: 320px;
-    height: 520px;
+    height: 570px;
     text-align: center;
     background-color: whitesmoke;
     border-radius: 20px;
@@ -34,8 +34,7 @@ input{
     background-color: whitesmoke;
     width: 250px;
     height: 40px;
-  
-    margin-bottom: 15px;
+    margin-top: 20px;
     font-size: 20px;
     border: none;
     border-bottom: 2px solid silver;
@@ -86,7 +85,7 @@ button a{
 
 
 .account{
-    margin-top: 60px;
+    margin-top: 30px;
     
 }
 
@@ -119,7 +118,7 @@ div .icon{
     div.create{
         margin: 120px auto;
         width: 320px;
-        height: 520px;
+        height: 570px;
         text-align: center;
         background-color: whitesmoke;
         border-radius: 20px;
@@ -132,8 +131,7 @@ div .icon{
         background-color: whitesmoke;
         width: 250px;
         height: 40px;
-      
-        margin-bottom: 15px;
+        margin-top: 20px;
         font-size: 20px;
         border: none;
         border-bottom: 2px solid silver;
@@ -183,7 +181,7 @@ div .icon{
     
     
     .account{
-        margin-top: 60px;
+        margin-top: 30px;
         
     }
     
@@ -215,7 +213,7 @@ div .icon{
     div.create{
         margin: 120px auto;
         width: 320px;
-        height: 520px;
+        height: 570px;
         text-align: center;
         background-color: whitesmoke;
         border-radius: 20px;
@@ -232,8 +230,7 @@ div .icon{
         background-color: whitesmoke;
         width: 250px;
         height: 40px;
-      
-        margin-bottom: 15px;
+        margin-top: 20px;
         font-size: 20px;
         border: none;
         border-bottom: 2px solid silver;
@@ -281,7 +278,7 @@ div .icon{
     
     
     .account{
-        margin-top: 60px;
+        margin-top: 30px;
         
     }
     
@@ -314,7 +311,7 @@ div .icon{
     div.create{
         margin: 120px auto;
         width: 320px;
-        height: 520px;
+        height: 570px;
         text-align: center;
         background-color: whitesmoke;
         border-radius: 20px;
@@ -343,8 +340,7 @@ div .icon{
         background-color: whitesmoke;
         width: 250px;
         height: 40px;
-      
-        margin-bottom: 15px;
+        margin-top: 20px;
         font-size: 20px;
         border: none;
         border-bottom: 2px solid silver;
@@ -390,7 +386,7 @@ div .icon{
     
     
     .account{
-        margin-top: 60px;
+        margin-top: 30px;
         
     }
     
