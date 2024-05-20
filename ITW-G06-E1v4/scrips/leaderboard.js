@@ -1,4 +1,3 @@
-//const local=localStorage.getItem("gameData")
 // Retrieve the data from local storage
 var localStorageData = localStorage.getItem("gameData");
 
@@ -12,8 +11,8 @@ if (localStorageData) {
     if (dataObject.hasOwnProperty(key)) {
       // Access the "points" value for each key
       var points = dataObject[key][0].points;
-      
-      console.log("Key:", key, "Points:", points);
+      var timeleft= dataObject[key][0].timeLeft
+      console.log("Key:", key, "Points:", points,"timeLeft",timeleft);
     }
   }
 } else {
@@ -22,8 +21,12 @@ if (localStorageData) {
 
 function editCell(){
     var cell = document.querySelector("#n1.points");
-
+    var cell2= document.querySelector("#n1.time");
     if (cell){
         cell.innerHTML=points;
     }
+    if (cell2){
+        cell2.innerHTML=timeleft;
+    }
 }
+
