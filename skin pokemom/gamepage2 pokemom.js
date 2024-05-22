@@ -12,16 +12,16 @@ var isFlipping = false;
 
 
 var cardList = [
-    "1",
-    "2",
-    "3",
-    "4",
-    "5",
-    "6",
-    "7",
-    "8",
-    "9",
-    "10"
+    "darkness",
+    "double",
+    "fairy",
+    "fighting",
+    "fire",
+    "grass",
+    "lightning",
+    "metal",
+    "psychic",
+    "water"
 ]
 
 

@@ -463,7 +463,31 @@ color: #e24d51;
     animation: enlarge 0.3s ease-in-out, shake 0.3s 0.3s, shrink 0.3s 0.6s ease-in-out, darken 0.6s;
 }
 
+.theme-switcher {
+    position: fixed;
+    top: 30%;
+    right: 2%;
+    text-align: center;
+}
 
+#themeButton {
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+#themeOptions {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+
+}
+
+#themeOptions p {
+    cursor: pointer;
+}
 
 @media only screen and (max-width:970px){
 
