@@ -21,7 +21,7 @@ body{
 div.create{
     margin: 120px auto;
     width: 320px;
-    height: 420px;
+    height: 570px;
     text-align: center;
     background-color: whitesmoke;
     border-radius: 20px;
@@ -33,12 +33,28 @@ div.create{
 input{
     background-color: whitesmoke;
     width: 250px;
-    height: 50px;
-    margin-bottom: 10px;
+    height: 40px;
+    margin-top: 20px;
     font-size: 20px;
     border: none;
     border-bottom: 2px solid silver;
     outline: none;
+    
+}
+
+.gender {
+    width: 20px;
+    height: 16px;
+  
+    
+}
+.option{
+    display: flex;
+    justify-content: space-around;
+
+}
+label{
+    font-size: 20px;
     
 }
 
@@ -69,7 +85,7 @@ button a{
 
 
 .account{
-    margin-top: 60px;
+    margin-top: 30px;
     
 }
 
@@ -102,7 +118,7 @@ div .icon{
     div.create{
         margin: 120px auto;
         width: 320px;
-        height: 420px;
+        height: 570px;
         text-align: center;
         background-color: whitesmoke;
         border-radius: 20px;
@@ -114,12 +130,28 @@ div .icon{
     input{
         background-color: whitesmoke;
         width: 250px;
-        height: 50px;
-        margin-bottom: 10px;
+        height: 40px;
+        margin-top: 20px;
         font-size: 20px;
         border: none;
         border-bottom: 2px solid silver;
         outline: none;
+        
+    }
+    
+    .gender {
+        width: 20px;
+        height: 16px;
+      
+        
+    }
+    .option{
+        display: flex;
+        justify-content: space-around;
+    
+    }
+    label{
+        font-size: 20px;
         
     }
     
@@ -149,7 +181,7 @@ div .icon{
     
     
     .account{
-        margin-top: 60px;
+        margin-top: 30px;
         
     }
     
@@ -181,7 +213,7 @@ div .icon{
     div.create{
         margin: 120px auto;
         width: 320px;
-        height: 420px;
+        height: 570px;
         text-align: center;
         background-color: whitesmoke;
         border-radius: 20px;
@@ -197,12 +229,28 @@ div .icon{
     input{
         background-color: whitesmoke;
         width: 250px;
-        height: 50px;
-        margin-bottom: 10px;
+        height: 40px;
+        margin-top: 20px;
         font-size: 20px;
         border: none;
         border-bottom: 2px solid silver;
         outline: none;
+        
+    }
+    
+    .gender {
+        width: 20px;
+        height: 16px;
+      
+        
+    }
+    .option{
+        display: flex;
+        justify-content: space-around;
+    
+    }
+    label{
+        font-size: 20px;
         
     }
     
@@ -230,7 +278,7 @@ div .icon{
     
     
     .account{
-        margin-top: 60px;
+        margin-top: 30px;
         
     }
     
@@ -263,7 +311,7 @@ div .icon{
     div.create{
         margin: 120px auto;
         width: 320px;
-        height: 420px;
+        height: 570px;
         text-align: center;
         background-color: whitesmoke;
         border-radius: 20px;
@@ -291,8 +339,8 @@ div .icon{
     input{
         background-color: whitesmoke;
         width: 250px;
-        height: 50px;
-        margin-bottom: 10px;
+        height: 40px;
+        margin-top: 20px;
         font-size: 20px;
         border: none;
         border-bottom: 2px solid silver;
@@ -300,7 +348,21 @@ div .icon{
         
     }
     
+    .gender {
+        width: 20px;
+        height: 16px;
+      
+        
+    }
+    .option{
+        display: flex;
+        justify-content: space-around;
     
+    }
+    label{
+        font-size: 20px;
+        
+    }
     
     button{
         background-color: aqua;
@@ -324,7 +386,7 @@ div .icon{
     
     
     .account{
-        margin-top: 60px;
+        margin-top: 30px;
         
     }
     
