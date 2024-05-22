@@ -45,3 +45,12 @@ core.AppendSong({
   album: '未知',
   img: 'Images2/sddefault.jpg'
 });
+
+core.AppendSong({
+  name: 'Arabian Adventure',
+  id: 5,
+  src: 'music/Arabian Adventure.mp3',
+  author: ['NONE'],
+  album: '未知',
+  img: 'Images2/huojin.jpg'
+});
