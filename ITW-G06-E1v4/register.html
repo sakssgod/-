@@ -14,29 +14,19 @@ Adriano Neves 62242 PL21 -->
     <link rel="stylesheet" href="styles/register.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://kit.fontawesome.com/6a6dd59775.js" crossorigin="anonymous"></script>
-    <script src="/ITW-G06-E1v4/scrips/register.js"></script>
+    <script src="register.js"></script>
 </head>
 <body>
     <div class="create">
-        
-        <form id="registerForm" autocomplete="off" >
-            <input type="text" placeholder="Account">
-            <div class="icon">
-                <i class='fas fa-user-alt'></i>
-            </div>
-            <input type="text" placeholder="email" class="account" id="account" autocomplete="off" required>
+        <form id="registerForm" autocomplete="off">
+            <input type="text" placeholder="account" class="account" id="account" autocomplete="off" required>
             <div class="icon">
                 <i class="material-icons">email</i>
-            </div>
-            <input type="text" placeholder="Age">
-           <div class="option">
-                <label ><input type="radio" name="gender" class="gender">Male</label>
-                <label ><input type="radio" name="gender" class="gender">Female</label>
             </div>
             <input type="password" placeholder="password" class="password" id="password" autocomplete="new-password" required>
             <div class="icon">
                 <i class='fas fa-lock'></i>
-            </div>   
+            </div>
             <input id="confirmPassword" type="password" placeholder="Confirm password" class="password"  autocomplete="new-password" required>
             <div class="icon">
                 <label for="confirmPassword"><i class='fas fa-lock'></i></label>
