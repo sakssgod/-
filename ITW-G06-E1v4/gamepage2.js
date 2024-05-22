@@ -57,26 +57,35 @@ window.onload = function() {
 }
 
 //键盘翻牌逻辑
-function flipCardFromInput() {
-    let input = document.getElementById('cardInput').value;
-    let key = parseInt(input);
-    if (key >= 1 && key <= 20) {
-        let index = key - 1;
-        let row = Math.floor(index / 5);
+function flipCardFromInput(key = null) {
+    let input;
+    if (key === null) {
+        input = document.getElementById('cardInput').value;
+    } else {
+        input = key;
+    }
+
+    let index = parseInt(input) - 1;  // 数组索引从0开始，输入是1到20，所以需要减1
+    if (index >= 0 && index < 20) {
+        // 计算卡片的行和列
+        let row = Math.floor(index / 5);  // 因为每行5列
         let column = index % 5;
 
-        let cardId = row.toString() + "-" + column.toString();
-        let card = document.getElementById(cardId);
+        let cardContainerId = row.toString() + "-" + column.toString();
+        let cardContainer = document.querySelector(`#board .card-container[id='${cardContainerId}'] .card`);
 
-        if (card && card.src.includes('back')) {
-            selectCard.call(card);
+        if (cardContainer && cardContainer.querySelector('.back').src.includes('back')) {  // 只有当卡片为背面时才触发
+            flipCard(cardContainer);  // 调用flipCard函数翻转卡片
         }
     } else {
         alert("Please enter a number between 1 and 20.");
     }
 
-    document.getElementById('cardInput').value = '';
+    if (key === null) {
+        document.getElementById('cardInput').value = '';  // 清除输入字段，准备下一次输入
+    }
 }
+
 
 
 // 检查用户登录状态
@@ -304,10 +313,11 @@ function displayGameData() {
 function createCardElement(cardImg, id) {
     const cardContainer = document.createElement("div");
     cardContainer.classList.add("card-container");
-
+    cardContainer.id = id;  // 设置card-container的id
+    
     const card = document.createElement("div");
     card.classList.add("card");
-    card.id = id;
+    //card.id = id;
 
     const front = document.createElement("img");
     front.classList.add("front");
@@ -350,8 +360,10 @@ function checkMatch() {
 
     // 添加随机播放一首歌曲的逻辑
     // 添加随机播放一首额外歌曲的逻辑
-    const randomSongIndex = Math.floor(Math.random() * 3) + 1;  // 随机选择1, 2, 或 3
-    const song = document.getElementById(`song${randomSongIndex}`);
+    const mismatchRandomSongIndex = Math.floor(Math.random() * 4) + 1;  // 随机选择1, 2, 或 3
+    const randomSongIndex = Math.floor(Math.random() * 3) + 1;  
+    const matchSong = document.getElementById(`match${randomSongIndex}`);
+    const mismatchSong = document.getElementById(`mismatch${mismatchRandomSongIndex}`);
 
     //将card1selected也就是card的上一级爸爸元素，也就是class “card-container”定义为card1Container
     const card1Container = card1Selected.parentElement;
@@ -369,7 +381,7 @@ function checkMatch() {
         points += 1;
         document.getElementById('points').innerText = points;
         // 播放匹配成功的提示音
-
+        matchSong.play();
         //移除添加的css，不然会有bug
         setTimeout(() => {
             card1Container.classList.remove("match-container");
@@ -395,7 +407,7 @@ function checkMatch() {
         card2Container.classList.add("nomatch-container");
 
         // 播放匹配失败的提示音
-        song.play();
+        mismatchSong.play();
 
         //移除css
         setTimeout(() => {

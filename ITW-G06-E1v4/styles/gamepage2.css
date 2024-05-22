@@ -108,10 +108,10 @@ nav .menu{
     width: 100%;
     padding: 20px 0 0 0;
     background-color:#2b376d;
-    height: 550px;
-    width: 600px;
+    height: 540px;
+    width: 500px;
     border: 10px ridge rgb(19 33 91);
-    border-radius: 4%;
+    /* border-radius: 4%; */
     text-align: center; 
 }
 
@@ -133,9 +133,7 @@ nav .menu{
 }
 
 .inputNumber{
-    position: absolute;
-    top: 30%;
-    right: 50%;
+
     margin: auto;
     background-color: none;
     width: 1000px;
@@ -146,8 +144,8 @@ nav .menu{
 
 .buttons{
     position: absolute;
-    top: 20%;
-    left: 50%;
+    top: 30%;
+    left: 37%;
     transform: translate(-50%, -50%);
     margin: auto;
     display: flex;
@@ -159,6 +157,104 @@ nav .menu{
     font-size: 20px;
     font-weight: 600;
 }
+
+
+/* 新增按钮和输入框样式 */
+input[type="number"] {
+    border: 2px solid #21293e ;
+    background-color:#2b376d ;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    width: 200px;  /* 设置宽度 */
+}
+
+input[type="number"]:hover {
+    background-color: rgb(176, 232, 247);
+    color: black;
+}
+
+
+/* 适用于 startButton 和 resetButton 的样式 */
+.buttons button {
+    margin: 0 10px;
+    width: 200px;  /* 设置宽度 */
+}
+
+/* 适用于 flipCardButton 的样式 */
+.inputNumber button {
+    margin-left: 10px;
+    width: 200px;  /* 设置宽度 */
+
+    position: absolute;
+    top: 55%;
+    left: 16%;
+}
+
+.inputNumber input {
+    
+    position: absolute;
+    top: 49%;
+    left: 16%;
+}
+
+#startButton {
+    border: 2px solid #21293e ;
+    background-color:#2b376d ;
+    color: rgb(67, 245, 135);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    width: 200px;  /* 设置宽度 */
+}
+
+#startButton:hover {
+    background-color: rgb(176, 232, 247);
+    color: black;
+    
+}
+
+#resetButton {
+    border: 2px solid #21293e ;
+    background-color:#2b376d ;
+    color: rgb(247, 224, 96);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    width: 200px;  /* 设置宽度 */
+}
+
+#resetButton:hover {
+    background-color: rgb(176, 232, 247);
+    color: rgb(247, 224, 96);
+    
+}
+
+/* 新增 Flip Card 按钮的样式 */
+#flipCardButton {
+    border: 2px solid #21293e ;
+    background-color:#2b376d ;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    width: 200px;  /* 设置宽度 */
+}
+
+#flipCardButton:hover {
+    background-color: rgb(176, 232, 247);
+    color: black;
+}
+
 
 .user-status{
     position: absolute;
@@ -175,6 +271,9 @@ nav .menu{
     font-weight: 600;
 
 }
+
+
+
 
 .game-data-container{
     position: absolute;
@@ -254,7 +353,7 @@ color: #e24d51;
     grid-template-columns: auto auto auto auto auto;
     grid-template-rows: auto auto auto auto ;
     position: relative;
-    bottom: 5%;
+    bottom: 7px;
 }
 
 .card {

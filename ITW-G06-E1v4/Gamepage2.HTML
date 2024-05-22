@@ -50,30 +50,34 @@ Adriano Neves 62242 PL21  -->
             <p>Points: <span id="points">0</span></p> <!-- 添加分数显示 -->
         </div>
         
-        <div class="buttons">
-            <button id="startButton">Start Game</button>
-            <button id="resetButton" style="display:none;">Reset Game</button>
-        </div>
-
-        <div class="inputNumber">
-            <input type="number" id="cardInput" placeholder="Enter number 1-20" min="1" max="20">
-            <button id="flipCardButton">Flip Card</button>
-        </div>
-        
         
 
         <div id="board" class="board"></div>
 
         <!-- 添加音频文件 -->
-        <audio id="song1" src="l1.mp3"></audio>
-        <audio id="song2" src="l2.mp3"></audio>
-        <audio id="song3" src="l3.mp3"></audio>
-        
+        <audio id="mismatch1" src="l1.mp3"></audio>
+        <audio id="mismatch2" src="l2.mp3"></audio>
+        <audio id="mismatch3" src="l3.mp3"></audio>
+        <audio id="mismatch4" src="天籁之音1.MP3"></audio>
+
+        <audio id="match1" src="nice.MP3"></audio>
+        <audio id="match2" src="I like ya cut g.MP3"></audio>
+        <audio id="match3" src="Gudjob! (Good Job Anime Sound) - Sound Effect for editing.mp3"></audio>
         <!-- 新增用户游戏数据记录区域 -->
         <div id="gameDataContainer" class="game-data-container">
             <h2>Game Records</h2>
         </div>
 
+    </div>
+
+    <div class="buttons">
+        <button id="startButton">Start Game</button>
+        <button id="resetButton" style="display:none;">Reset Game</button>
+    </div>
+
+    <div class="inputNumber">
+        <input type="number" id="cardInput" placeholder="Enter number 1-20" min="1" max="20">
+        <button id="flipCardButton">Flip Card</button>
     </div>
 
 
