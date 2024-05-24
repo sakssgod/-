@@ -20,8 +20,9 @@ if (localStorageData) {
 }
 
 function editCell(){
-    var cell = document.querySelector("#n1.points");
-    var cell2= document.querySelector("#n1.time");
+    var x = 1
+    var cell = document.querySelector("#n"+ x +".points");
+    var cell2= document.querySelector("#n"+ x +".time");
     if (cell){
         cell.innerHTML=points;
     }
