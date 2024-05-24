@@ -9,8 +9,9 @@ Adriano Neves 62242 PL21  -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flip Card</title>
+    <link rel="stylesheet" href="index.bundle.css">
     <link rel="stylesheet" href="styles/gamepage2.css">
-    <script src="/ITW-G06-E1v4/scrips/gamepage2.js"></script>
+    <script src="gamepage2.js"></script>
 </head>
 <body>
     <nav>
@@ -45,29 +46,38 @@ Adriano Neves 62242 PL21  -->
         <div class="counters">
             <h2>Errors: <span id="errors">0</span></h2>
             <p>Time passed: <span id="timePassed">0</span> seconds</p>
-            <p>Time left: <span id="timeLeft">100</span> seconds</p>
+            <p>Time left: <span id="timeLeft">20</span> seconds</p>
             <p>Points: <span id="points">0</span></p> <!-- 添加分数显示 -->
         </div>
         
-        <div class="buttons">
-            <button id="startButton">Start Game</button>
-            <button id="resetButton" style="display:none;">Reset Game</button>
-        </div>
-
-        <div class="inputNumber">
-            <input type="number" id="cardInput" placeholder="Enter number 1-20" min="1" max="20">
-            <button onclick="flipCardFromInput()">Flip Card</button>
-        </div>
-        
         
 
-        <div id="board"></div>
-        
+        <div id="board" class="board"></div>
+
+        <!-- 添加音频文件 -->
+        <audio id="mismatch1" src="l1.mp3"></audio>
+        <audio id="mismatch2" src="l2.mp3"></audio>
+        <audio id="mismatch3" src="l3.mp3"></audio>
+        <audio id="mismatch4" src="天籁之音1.MP3"></audio>
+
+        <audio id="match1" src="nice.MP3"></audio>
+        <audio id="match2" src="I like ya cut g.MP3"></audio>
+        <audio id="match3" src="Gudjob! (Good Job Anime Sound) - Sound Effect for editing.mp3"></audio>
         <!-- 新增用户游戏数据记录区域 -->
         <div id="gameDataContainer" class="game-data-container">
             <h2>Game Records</h2>
         </div>
 
+    </div>
+
+    <div class="buttons">
+        <button id="startButton">Start Game</button>
+        <button id="resetButton" style="display:none;">Reset Game</button>
+    </div>
+
+    <div class="inputNumber">
+        <input type="number" id="cardInput" placeholder="Enter number 1-20" min="1" max="20">
+        <button id="flipCardButton">Flip Card</button>
     </div>
 
 
@@ -82,4 +92,11 @@ Adriano Neves 62242 PL21  -->
     </div>
 
 </body>
+
+<!-- 先加载 Petite Vue CDN 和 index.bundle.js -->
+<script src="https://unpkg.com/petite-vue"></script>
+<script src="index.bundle.js"></script>
+<!-- 然后加载 script.js -->
+<script src="homepage.js"></script>
+
 </html>

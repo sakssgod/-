@@ -9,6 +9,7 @@ Adriano Neves 62242 PL21  -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flip Card</title>
+    <link rel="stylesheet" href="index.bundle.css">
     <link rel="stylesheet" href="styles/homepage.css">
 </head>
 <body>
@@ -31,14 +32,6 @@ Adriano Neves 62242 PL21  -->
         </div>
         
     </nav>
-
-
-
-    <div class="Music-player">
-        <a href=""><i class="fab fa-youtube"></i></a>
-    </div>
-
-
 
 
     <div class="imagem"> </div>
@@ -66,8 +59,13 @@ Adriano Neves 62242 PL21  -->
             
         </p>
     </div>
-    <embed src="media/Yosuga No Sora「OST」- Egao no Yukue - Bruno Wen-li, Manabu Miwa.mp3" autostart="true" loop="true" hidden="true"></embed>
+
     
 </body>
 
+<!-- 先加载 Petite Vue CDN 和 index.bundle.js -->
+<script src="https://unpkg.com/petite-vue"></script>
+<script src="index.bundle.js"></script>
+<!-- 然后加载 script.js -->
+<script src="homepage.js"></script>
 </html>
