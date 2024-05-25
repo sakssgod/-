@@ -119,7 +119,12 @@ Adriano Neves 62242 PL21 */
     text-align: left;
     font-size: 1.2rem;
   }
-  
+  .wins{
+    font-weight: bold;
+    font-size: 1.3rem;
+    align-items: center;
+    text-align: right;
+  }
   .points {
     font-weight: bold;
     font-size: 1.3rem;
