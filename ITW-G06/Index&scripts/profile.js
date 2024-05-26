@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const user = users.find(user => user.account === loggedInUserAccount);
 
     if (user) {
-        console.log('User found:', user);  // 调试信息
+        console.log('User found:', user); 
 
         document.getElementById('userAvatar').src = user.avatar ? `../images/${user.avatar}` : 'https://example.com/path/to/avatar.jpg';
         document.getElementById('userAccount').textContent = loggedInUserAccount;

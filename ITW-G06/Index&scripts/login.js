@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    //删除用户信息
+    //delte user information."
     document.getElementById('deleteUserForm').addEventListener('submit', function(event) {
         event.preventDefault();
 
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('deleteUserForm').reset();
     });
 
-    //显示用户信息
+    //Display user information
     function displayUsers() {
         const users = JSON.parse(localStorage.getItem('users')) || [];
         const userList = document.getElementById('userList');
