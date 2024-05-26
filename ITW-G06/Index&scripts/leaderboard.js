@@ -1,29 +1,29 @@
 /* itw-2023/2024
-grupo:06
+group:06
 jiayi li 62244 PL25
 Oujie Wu 62228 PL25
 Adriano Neves 62242 PL21 */
 
-// 读取local storage中的数据
+// Read data from local storage
 const gameDataString = localStorage.getItem('gameData');
 const trioGameDataString = localStorage.getItem('trioGameData');
 const valuename = localStorage.getItem("loggedInUser")
-// 检查数据是否存在
+// Check if data exists
 if (gameDataString && trioGameDataString) {
-    // 解析JSON字符串为对象
+    // Parse JSON strings into objects
     const gameData = JSON.parse(gameDataString);
     const trioGameData = JSON.parse(trioGameDataString);
 
-    // 调试：打印读取到的数据
+    // Debug: print the read data
     console.log("Normal Game Data:", gameData);
     console.log("Trio Game Data:", trioGameData);
 
-    // 计算玩家的错误总数
+    // Calculate the total number of errors for a player
     const calculateTotalErrors = (playerData) => {
         return playerData.reduce((totalErrors, game) => totalErrors + game.errors, 0);
     };
 
-    // 处理玩家数据并计算总错误数
+    // Process player data and calculate total errors
     const processPlayerErrors = (data) => {
         const result = {};
         for (const player in data) {
@@ -34,11 +34,11 @@ if (gameDataString && trioGameDataString) {
         return result;
     };
 
-    // 处理Normal Ranking数据
+    // Process Normal Ranking data
     const normalPlayerErrors = processPlayerErrors(gameData);
     console.log("Normal Player Errors:", normalPlayerErrors);
 
-    // 处理Trio Ranking数据
+    // Process Trio Ranking data
     const trioPlayerErrors = processPlayerErrors(trioGameData);
     console.log("Trio Player Errors:", trioPlayerErrors);
 } else {
@@ -56,9 +56,4 @@ function editCell(){
     points.innerHTML=dataObject[valuename][0].points;
     time.innerHTML=dataObject[valuename][0].timePassed;
     errors.innerHTML =dataObject[valuename][0].errors;
-    
-    
-    
-
 }
-
