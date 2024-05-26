@@ -1,0 +1,87 @@
+<!-- itw-2023/2024
+grupo:06
+jiayi li 62244 PL25
+Oujie Wu 62228 PL25
+Adriano Neves 62242 PL21 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="../styles/register.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6a6dd59775.js" crossorigin="anonymous"></script>
+    <script src="register.js"></script>
+</head> 
+<body>
+    <div class="create">
+        <form id="registerForm" autocomplete="off">
+            
+            <div class="avatar-selection">
+                <label>Select an avatar:</label>
+                <button id="avatarButton" class="avatar-button">
+                    <img src="../images/NoneUser.jpeg" alt="Select Avatar" class="default-avatar">
+                </button>
+            </div>
+    
+            <input type="text" placeholder="account" class="account" id="account" autocomplete="off" required>
+            <div class="icon">
+                <i class='fas fa-user-alt'></i>
+            </div>
+            <input type="text" placeholder="email" class="email1" id="email" autocomplete="off" required> <!-- 新增 -->
+            <div class="icon">
+                <i class="material-icons">email</i>
+            </div>
+            <input type="text" placeholder="Age" id="age" required> <!-- 新增 -->
+           <div class="option">
+                <label><input type="radio" name="gender" class="gender" value="male">Male</label> <!-- 新增 -->
+                <label><input type="radio" name="gender" class="gender" value="female">Female</label> <!-- 新增 -->
+            </div>
+            <input type="password" placeholder="password" class="password" id="password" autocomplete="new-password" required>
+            <div class="icon">
+                <i class='fas fa-lock'></i>
+            </div>
+            <input id="confirmPassword" type="password" placeholder="Confirm password" class="password" autocomplete="new-password" required>
+            <div class="icon">
+                <label for="confirmPassword"><i class='fas fa-lock'></i></label>
+            </div>
+            <button class="signbutton" type="submit">Sign</button>
+            <button class="backToLoginbutton" id="backToLogin">Back to Login</button>
+            
+        </form>
+
+        
+    </div>
+
+    <div id="avatarOptions" class="avatar-div" style="display: none;">
+        <span class="close">&times;</span>
+        <div class="avatars">
+            <img src="../images/1.jpg" class="avatar" data-avatar="1.jpg">
+            <img src="../images/2.jpg" class="avatar" data-avatar="2.jpg">
+            <img src="../images/3.jpg" class="avatar" data-avatar="3.jpg">
+            <img src="../images/4.jpg" class="avatar" data-avatar="5.jpg">
+            <img src="../images/5.jpg" class="avatar" data-avatar="6.jpg">
+            <img src="../images/1222945.jpg" class="avatar" data-avatar="7.jpg">
+            <!-- 添加更多头像 -->
+        </div>
+    </div>
+
+    <div class="view-users">
+        <h2>Registered Users</h2>
+        <ul id="userList"></ul>
+    </div>
+
+    <div class="delete-user">
+        <h2>Delete User</h2>
+        <form id="deleteUserForm" autocomplete="off">
+            <input type="text" placeholder="account to delete" id="deleteAccount" autocomplete="off" required>
+            <button type="submit"  class="deletebutton">Delete</button>
+        </form>
+    </div>
+
+   
+    
+</body>
+</html>
