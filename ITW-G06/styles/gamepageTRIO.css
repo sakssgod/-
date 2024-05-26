@@ -108,8 +108,8 @@ nav .menu{
     width: 100%;
     padding: 20px 0 0 0;
     background-color:#2b376d;
-    height: 540px;
-    width: 500px;
+    height: 700px;
+    width: 650px;
     border: 10px ridge rgb(19 33 91);
     /* border-radius: 4%; */
     text-align: center; 
@@ -363,7 +363,7 @@ color: #e24d51;
     grid-template-columns: repeat(6, auto);
     grid-template-rows: repeat(5, auto);
     position: relative;
-    bottom: 7px;
+    right: 50px;
 }
 
 
