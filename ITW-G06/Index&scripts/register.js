@@ -7,14 +7,14 @@ Adriano Neves 62242 PL21 */
 
 document.addEventListener('DOMContentLoaded', function() {
     const accountInput = document.getElementById('account');
-    const emailInput = document.getElementById('email'); // 新增
-    const ageInput = document.getElementById('age'); // 新增
+    const emailInput = document.getElementById('email'); // addition
+    const ageInput = document.getElementById('age'); // addition
     const passwordInput = document.getElementById('password');
     const confirmPasswordInput = document.getElementById('confirmPassword');
     const deleteAccountInput = document.getElementById('deleteAccount');
-    const genderInputs = document.querySelectorAll('input[name="gender"]'); // 新增
+    const genderInputs = document.querySelectorAll('input[name="gender"]'); // addition
 
-    // 禁止使用空格注册，无效化空格
+    // "Prohibited to use spaces for registration, spaces will be invalidated."
     function removeSpaces(event) {
         event.target.value = event.target.value.replace(/\s+/g, '');
     }
@@ -24,62 +24,62 @@ document.addEventListener('DOMContentLoaded', function() {
     confirmPasswordInput.addEventListener('input', removeSpaces);
     deleteAccountInput.addEventListener('input', removeSpaces);
 
-    const avatarButton = document.getElementById('avatarButton'); // 获取按钮元素
-    const avatarOptions = document.getElementById('avatarOptions'); // 获取替代模态窗口的div
-    const closeBtn = document.querySelector('.avatar-div .close'); // 获取关闭按钮元素
-    const selectedAvatarImg = avatarButton.querySelector('img'); // 获取按钮中的图片元素
-    let selectedAvatar = null; // 用于存储选定的头像数据
+    const avatarButton = document.getElementById('avatarButton'); // Retrieve button element
+    const avatarOptions = document.getElementById('avatarOptions'); // Get a div to replace a modal window
+    const closeBtn = document.querySelector('.avatar-div .close'); // Retrieve the close button element
+    const selectedAvatarImg = avatarButton.querySelector('img'); // Retrieve the image element within the button
+    let selectedAvatar = null; // Used for storing selected avatar data.
 
-    // 当按钮被点击时，显示div
+    // When the button is clicked, display the div.
     avatarButton.addEventListener('click', function() {
         avatarOptions.style.display = 'block';
     });
 
-    // 当关闭按钮被点击时，隐藏div
+    // Hide the div when the close button is clicked.
     closeBtn.addEventListener('click', function() {
         avatarOptions.style.display = 'none';
     });
 
-    // 为每个头像图片添加点击事件
+    // Add a click event to each avatar image
     document.querySelectorAll('.avatar').forEach(img => {
         img.addEventListener('click', function() {
-            // 移除所有头像图片的选中样式
+            // Remove the selected style from all avatar images.
             document.querySelectorAll('.avatar').forEach(avatar => avatar.classList.remove('selected'));
-            // 为点击的头像图片添加选中样式
+            // Add selected style to clicked avatar image
             img.classList.add('selected');
-            // 将选定的头像数据存储在 selectedAvatar 变量中
+            // "Store the selected avatar data in the selectedAvatar variable
             selectedAvatar = img.dataset.avatar;
-            // 将选定的头像图片显示在按钮中
+            // Display the selected profile picture in the button
             selectedAvatarImg.src = img.src;
-            // 隐藏div
+            // Hidden div
             avatarOptions.style.display = 'none';
         });
     });
 
-    // 注册运行逻辑
+    // Register operation logic
     document.getElementById('registerForm').addEventListener('submit', function(event) {
         event.preventDefault();
 
-        // 获取输入值并去除前后空格
+        // Retrieve input values and trim leading and trailing spaces.
         const account = accountInput.value.trim();
-        const email = emailInput.value.trim(); // 新增
-        const age = ageInput.value.trim(); // 新增
+        const email = emailInput.value.trim(); // addition
+        const age = ageInput.value.trim(); // addition
         const password = passwordInput.value.trim();
         const confirmPassword = confirmPasswordInput.value.trim();
-        let gender = ''; // 新增
-        genderInputs.forEach(input => { // 新增
+        let gender = ''; // addition
+        genderInputs.forEach(input => { // addition
             if (input.checked) {
                 gender = input.value;
             }
         });
 
-        // 检查是否为空
+        // Check if it is empty
         if (account === '' || email === '' || age === '' || password === '' || confirmPassword === '' || gender === '' || !selectedAvatar) {
             alert('All fields are required!');
             return;
         }
 
-        // 检查密码是否匹配
+        // Check if the password matches
         if (password !== confirmPassword) {
             alert('Passwords do not match!');
             return;
@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
-        users.push({ account: account, email: email, age: age, gender: gender, avatar: selectedAvatar, password: password }); // 修改
+        users.push({ account: account, email: email, age: age, gender: gender, avatar: selectedAvatar, password: password }); 
         localStorage.setItem('users', JSON.stringify(users));
 
         alert('User registered successfully!');
@@ -100,12 +100,12 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('registerForm').reset();
     });
 
-    // 回到登录页面
+    // Return to the login page
     document.getElementById('backToLogin').addEventListener('click', function() {
         window.location.href = 'login.html';
     });
 
-    // 删除用户信息
+    // Delete user information
     document.getElementById('deleteUserForm').addEventListener('submit', function(event) {
         event.preventDefault();
 
@@ -125,23 +125,23 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('deleteUserForm').reset();
     });
 
-    // 显示用户信息
-    function displayUsers() { // 修改
+    // Display user information.
+    function displayUsers() { 
         const users = JSON.parse(localStorage.getItem('users')) || [];
         const userList = document.getElementById('userList');
         userList.innerHTML = '';
         users.forEach(user => {
             const li = document.createElement('li');
             li.textContent = `Account: ${user.account}, Email: ${user.email}, Age: ${user.age}, Gender: ${user.gender}, Avatar: ${user.avatar}`; // 修改
-            li.style.margin = '10px 0'; // 新增
+            li.style.margin = '10px 0'; 
             userList.appendChild(li);
         });
     }
 
-    // 清空输入字段
+    // Clear input field
     accountInput.value = '';
-    emailInput.value = ''; // 新增
-    ageInput.value = ''; // 新增
+    emailInput.value = ''; 
+    ageInput.value = ''; 
     passwordInput.value = '';
     confirmPasswordInput.value = '';
     deleteAccountInput.value = '';
