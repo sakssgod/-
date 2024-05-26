@@ -1,20 +1,10 @@
-/* itw-2023/2024
-grupo:06
-jiayi li 62244 PL25
-Oujie Wu 62228 PL25
-Adriano Neves 62242 PL21 */
-
-
 
 var errors = 0;
 
-
-//新东西
+// New feature
 var matches = 0;
 
-
-
-var points = 0; // 添加分数变量
+var points = 0; // Add score variable
 var isFlipping = false;
 var players = [
     { name: 'Player 1', account: '', errors: 0, points: 0 },
@@ -35,11 +25,10 @@ var cardList = [
     "10"
 ]
 
-
 var cardSet;
 var board = [];
 var rows = 4;
-var columns =5;
+var columns = 5;
 var card1Selected;
 var card2Selected;
 
@@ -68,9 +57,7 @@ window.onload = function() {
     document.getElementById('flipCardButton').onclick = function() {
         flipCardFromInput();
     };
-    
 }
-
 
 function loginPlayer(playerIndex, account) {
     if (account) {
@@ -81,10 +68,7 @@ function loginPlayer(playerIndex, account) {
     }
 }
 
-//玩家设置时间
-
-
-
+// Player time setting
 
 function updatePlayerDisplay() {
     document.getElementById('errors').innerText = players[currentPlayerIndex].errors;
@@ -96,7 +80,7 @@ function updatePlayerDisplay() {
     document.getElementById('currentPlayerName').innerText = players[currentPlayerIndex].name;
 }
 
-//键盘翻牌逻辑
+// Card flipping logic with keyboard input
 function flipCardFromInput(key = null) {
     let input;
     if (key === null) {
@@ -105,30 +89,28 @@ function flipCardFromInput(key = null) {
         input = key;
     }
 
-    let index = parseInt(input) - 1;  // 数组索引从0开始，输入是1到20，所以需要减1
+    let index = parseInt(input) - 1;  // Array index starts from 0, input is from 1 to 20, so we need to subtract 1
     if (index >= 0 && index < 20) {
-        // 计算卡片的行和列
-        let row = Math.floor(index / 5);  // 因为每行5列
+        // Calculate card's row and column
+        let row = Math.floor(index / 5);  // Each row has 5 columns
         let column = index % 5;
 
         let cardContainerId = row.toString() + "-" + column.toString();
         let cardContainer = document.querySelector(`#board .card-container[id='${cardContainerId}'] .card`);
 
-        if (cardContainer && cardContainer.querySelector('.back').src.includes('back')) {  // 只有当卡片为背面时才触发
-            flipCard(cardContainer);  // 调用flipCard函数翻转卡片
+        if (cardContainer && cardContainer.querySelector('.back').src.includes('back')) {  // Only trigger if the card is face down
+            flipCard(cardContainer);  // Call flipCard function to flip the card
         }
     } else {
         alert("Please enter a number between 1 and 20.");
     }
 
     if (key === null) {
-        document.getElementById('cardInput').value = '';  // 清除输入字段，准备下一次输入
+        document.getElementById('cardInput').value = '';  // Clear input field for next input
     }
 }
 
-
-
-// 检查用户登录状态
+// Check user login status
 function checkLoginStatus() {
     const userStatus = document.getElementById('userStatus');
     const signInMenu = document.getElementById('signInMenu');
@@ -151,7 +133,7 @@ function checkLoginStatus() {
         userProfile.style.display = 'inline';
         profileMenu.style.display = 'inline';
         gameplayHistoryMenu.style.display = 'inline';
-        displayGameData(); // 新增调用
+        displayGameData(); // Add call
     } else {
         userStatus.textContent = 'You are not logged in.';
 
@@ -163,33 +145,33 @@ function checkLoginStatus() {
         userProfile.style.display = 'none';
         profileMenu.style.display = 'none';
         gameplayHistoryMenu.style.display = 'none';
-        document.getElementById('gameDataContainer').innerHTML = ''; // 清空游戏数据
+        document.getElementById('gameDataContainer').innerHTML = ''; // Clear game data
     }
 }
 
-// 检查是否已登录
+// Check if user is logged in
 function isLoggedIn() {
     return localStorage.getItem('loggedInUser') !== null;
 }
 
-// 处理用户登出
+// Handle user logout
 function logoutUser() {
     localStorage.removeItem('loggedInUser');
     localStorage.removeItem('loggedInUserAvatar');
     alert('You have been logged out.');
-    // 重置页面状态
+    // Reset page state
     resetGame();
     checkLoginStatus();
 }
 
-// 初始化棋盘显示背面
+// Initialize board showing the back side of the cards
 function initializeBoard() {
-    document.getElementById('board').innerHTML = ''; // 清空棋盘
+    document.getElementById('board').innerHTML = ''; // Clear the board
     for (let r = 0; r < rows; r++) {
         for (let c = 0; c < columns; c++) {
             let card = document.createElement("img");
             card.id = r.toString() + "-" + c.toString();
-            card.src = "back.jpg";  // 显示卡牌背面
+            card.src = "back.jpg";  // Show card back side
             card.classList.add("card");
             document.getElementById('board').appendChild(card);
         }
@@ -197,18 +179,15 @@ function initializeBoard() {
 }
 
 function shuffleCards() {
-
     cardSet = cardList.concat(cardList); // two of each card
     for (let i = cardSet.length - 1; i > 0; i--) {
         let j = Math.floor(Math.random() * (i + 1));
         [cardSet[i], cardSet[j]] = [cardSet[j], cardSet[i]]; // ES6 destructuring
- 
     }
     console.log(cardSet);
 }
 
 function startGame() {
-  
     matches = 0;
     players[0].errors = 0;
     players[0].points = 0;
@@ -223,14 +202,13 @@ function startGame() {
     document.getElementById('resetButton').style.display = 'inline';
     startTime = new Date();
 
-
     shuffleCards();
     setupBoard();
 }
 
-// 新东西
+// New feature
 function resetGame() {
-    document.getElementById('board').innerHTML = ''; // 清空棋盘
+    document.getElementById('board').innerHTML = ''; // Clear the board
 
     document.getElementById('startButton').style.display = 'inline';
     document.getElementById('resetButton').style.display = 'none';
@@ -240,17 +218,13 @@ function resetGame() {
     card1Selected = null;
     card2Selected = null;
     board = [];
-    initializeBoard(); // 重新初始化棋盘
+    initializeBoard(); // Reinitialize the board
 }
 
-
-
-
-
-// 新东西
+// New feature
 function setupBoard() {
-    document.getElementById('board').innerHTML = ''; // 清空棋盘以准备新游戏
-    board = []; // 清空board数组
+    document.getElementById('board').innerHTML = ''; // Clear the board for a new game
+    board = []; // Clear the board array
     for (let r = 0; r < rows; r++) {
         let row = [];
         for (let c = 0; c < columns; c++) {
@@ -264,7 +238,6 @@ function setupBoard() {
     }
 }
 
-
 function hideCards() {
     for (let r = 0; r < rows; r++) {
         for (let c = 0; c < columns; c++) {
@@ -274,12 +247,10 @@ function hideCards() {
     }
 }
 
-// 计算游玩时间以及倒计时
+// Calculate play time and countdown
 
-
-//选择卡牌1和2
+// Select cards 1 and 2
 function selectCard() {
-
     if (this.src.includes("back")) {
         if (!card1Selected) {
             card1Selected = this;
@@ -301,12 +272,9 @@ function selectCard() {
             setTimeout(update, 1000);
         }
     }
-
 }
 
-
-
-//保存用户游戏记录数据
+// Save user game record data
 function saveGameData(player1Errors, player1Points, player2Errors, player2Points, winner) {
     const gameData = JSON.parse(localStorage.getItem('1v1gameData')) || [];
 
@@ -321,7 +289,7 @@ function saveGameData(player1Errors, player1Points, player2Errors, player2Points
             errors: player2Errors,
             points: player2Points
         },
-        winner: winner, // 添加获胜玩家的信息
+        winner: winner, // Add winner's information
         date: new Date().toLocaleString()
     };
 
@@ -329,9 +297,7 @@ function saveGameData(player1Errors, player1Points, player2Errors, player2Points
     localStorage.setItem('1v1gameData', JSON.stringify(gameData));
 }
 
-
-
-//显示用户游戏记录数据
+// Display user game record data
 function displayGameData() {
     const gameDataContainer = document.getElementById('gameDataContainer');
     gameDataContainer.innerHTML = '';
@@ -358,15 +324,14 @@ function displayGameData() {
     });
 }
 
-//创建卡牌容器，创建子元素，背面卡以及正面
+// Create card container, add children, back and front cards
 function createCardElement(cardImg, id) {
     const cardContainer = document.createElement("div");
     cardContainer.classList.add("card-container");
-    cardContainer.id = id;  // 设置card-container的id
+    cardContainer.id = id;  // Set card-container id
     
     const card = document.createElement("div");
     card.classList.add("card");
-    //card.id = id;
 
     const front = document.createElement("img");
     front.classList.add("front");
@@ -396,11 +361,10 @@ function flipCard(card) {
         card1Selected = card;
     } else if (!card2Selected) {
         card2Selected = card;
-        isFlipping = true; // 开始翻牌过程，禁用进一步的卡牌点击
-        setTimeout(checkMatch, 600); // 等待1秒再检查匹配情况
+        isFlipping = true; // Start flipping process, disable further card clicks
+        setTimeout(checkMatch, 600); // Wait 1 second before checking for a match
     }
 }
-
 
 function checkMatch() {
     const card1Img = card1Selected.querySelector(".front").src;
@@ -455,14 +419,12 @@ function checkMatch() {
             card2Selected = null;
             isFlipping = false;
 
-            // 切换到另一玩家
+            // Switch to the other player
             currentPlayerIndex = (currentPlayerIndex + 1) % 2;
             updatePlayerDisplay();
         }, 600);
     }
 }
-
-
 
 function endGame() {
     const winner = determineWinner();
@@ -487,7 +449,6 @@ function determineWinner() {
     return winner;
 }
 
-
 document.addEventListener('DOMContentLoaded', function() {
     const themeButton = document.getElementById('themeButton');
     const themeOptions = document.getElementById('themeOptions');
@@ -499,8 +460,4 @@ document.addEventListener('DOMContentLoaded', function() {
             themeOptions.style.display = 'none';
         }
     });
-
-
 });
-
-

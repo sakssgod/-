@@ -1,5 +1,5 @@
 <!-- itw-2023/2024
-grupo:06
+group:06
 jiayi li 62244 PL25
 Oujie Wu 62228 PL25
 Adriano Neves 62242 PL21  -->
@@ -56,33 +56,24 @@ Adriano Neves 62242 PL21  -->
             <h2>Errors: <span id="errors">0</span></h2>
             <p>Time passed: <span id="timePassed">0</span> seconds</p>
             <p>Time left: <span id="timeLeft">60</span> seconds</p>
-            <p>Points: <span id="points">0</span></p> <!-- 添加分数显示 -->
+            <p>Points: <span id="points">0</span></p> <!-- Add score display -->
         </div>
-        
-        
-        
 
         <div id="board" class="board"></div>
 
-         <!-- 添加音频文件 -->
-         <audio id="mismatch1" src="../music/wrong.wav"></audio>
-         <audio id="mismatch2" src="../music/wrong2.wav"></audio>
-         <audio id="mismatch3" src="../music/wrong3.wav"></audio>
-         <audio id="mismatch4" src="../music/wrong4.wav"></audio>
-         
-  
-         <audio id="match1" src="../music/nice.MP3"></audio>
-         <audio id="match2" src="../music/I like ya cut g.MP3"></audio>
-         <audio id="match3" src="../music/Gudjob! (Good Job Anime Sound) - Sound Effect for editing.mp3"></audio>
-
-
+        <!-- Add audio files -->
+        <audio id="mismatch1" src="../music/wrong.wav"></audio>
+        <audio id="mismatch2" src="../music/wrong2.wav"></audio>
+        <audio id="mismatch3" src="../music/wrong3.wav"></audio>
+        <audio id="mismatch4" src="../music/wrong4.wav"></audio>
+        <audio id="match1" src="../music/nice.MP3"></audio>
+        <audio id="match2" src="../music/I like ya cut g.MP3"></audio>
+        <audio id="match3" src="../music/Gudjob! (Good Job Anime Sound) - Sound Effect for editing.mp3"></audio>
     </div>
 
-        <!-- 新增用户游戏数据记录区域 -->
+    <!-- Add user game data record area -->
     <div id="gameDataContainer" class="game-data-container">
-
     </div>
-
 
     <div class="time-setting">
         <input type="number" id="gameTimeInput" min="10" max="3600" autocomplete="off" placeholder="Set Game Time (sec)">
@@ -101,14 +92,14 @@ Adriano Neves 62242 PL21  -->
 
     <!-- Theme switcher icon and options -->
     <div class="theme-switcher">
-                <button id="themeButton">
-                    <img src="../images/skin-icon.png" alt="Switch Theme" style="width: 30px; height: 30px;">
-                </button> 
-                <div id="themeOptions" style="display: none;">
-                    <p onclick="setBackground('pokemon-bg.jpg')"><a href="Gamepage2.HTML">背景1</a></p>
-                    <p onclick="setBackground('images/1222945.jpg')"><a href="/FLIPCARD_GAME/skin pokemom/Gamepage2 pokemom.HTML">背景2</a></p>
-                    <p onclick="setBackground('background3')">背景3</p>
-                </div>
+        <button id="themeButton">
+            <img src="../images/skin-icon.png" alt="Switch Theme" style="width: 30px; height: 30px;">
+        </button> 
+        <div id="themeOptions" style="display: none;">
+            <p onclick="setBackground('pokemon-bg.jpg')"><a href="Gamepage2.HTML">Background 1</a></p>
+            <p onclick="setBackground('images/1222945.jpg')"><a href="/FLIPCARD_GAME/skin pokemom/Gamepage2 pokemom.HTML">Background 2</a></p>
+            <p onclick="setBackground('background3')">Background 3</p>
+        </div>
     </div>
 
     <div class="footer">
@@ -120,14 +111,12 @@ Adriano Neves 62242 PL21  -->
             <p>This website was coded by Group03 🤓</p>
         </div>
     </div>
-
-
 </body>
 
-<!-- 先加载 Petite Vue CDN 和 index.bundle.js -->
+<!-- First load Petite Vue CDN and index.bundle.js -->
 <script src="https://unpkg.com/petite-vue"></script>
 <script src="index.bundle.js"></script>
-<!-- 然后加载 script.js -->
+<!-- Then load script.js -->
 <script src="homepage.js"></script>
 
 </html>
