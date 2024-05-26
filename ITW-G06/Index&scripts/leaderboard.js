@@ -38,3 +38,20 @@ if (gameDataString && trioGameDataString) {
 } else {
     console.log("No game data found in local storage.");
 }
+
+function editCell(){
+    var points = document.querySelector("#n1.points");
+    var time = document.querySelector("#n1.time");
+    var errors = document.querySelector("#n1.wins")
+    var dataObject = JSON.parse(gameDataString);
+    var dataArray=[]
+
+    points.innerHTML=dataObject["dridri"][0].points;
+    time.innerHTML=dataObject["dridri"][0].timePassed;
+    errors.innerHTML =dataObject["dridri"][0].errors;
+    
+    
+    
+
+}
+
