@@ -65,7 +65,7 @@ function checkLoginStatus() {
         userProfile.style.display = 'inline';
         profileMenu.style.display = 'inline';
         gameplayHistoryMenu.style.display = 'inline';
-        displayGameData(); // 新增调用
+        displayGameData(); // New call
     } else {
         userStatus.textContent = 'You are not logged in.';
         userAvatar.src = '/FLIPCARD_GAME/images/NoneUser.jpeg';
@@ -76,7 +76,7 @@ function checkLoginStatus() {
         userProfile.style.display = 'none';
         profileMenu.style.display = 'none';
         gameplayHistoryMenu.style.display = 'none';
-        document.getElementById('gameDataContainer').innerHTML = ''; // 清空游戏数据
+        document.getElementById('gameDataContainer').innerHTML = ''; // Clear game data
     }
 }
 
