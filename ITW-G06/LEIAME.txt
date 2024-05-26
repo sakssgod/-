@@ -33,6 +33,10 @@ gamepage2 pokemon.js
 Gamepage2 pokemon.html
 register.js
 styleLeaderboard.css
+index.html
+scrips.js
+leaderboard.js (half)
+
 
 Jiayi Li contribuiu com:
 login.html
@@ -45,7 +49,7 @@ register.css
 
 Adriano Neves contribuiu com:
 leaderboard.html
-leaderboard.js
+leaderboard.js (half)
 profile.html
 profile.css
 profile.js
