@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function togglePassword() {
-    const passwordSpan = document.getElementById('userPassword');
+    const passwordSpan = document.getElementById('userPassword'); 
     const eyeButton = document.querySelector('.toggle-password');
     const loggedInUserAccount = localStorage.getItem('loggedInUser');
     const users = JSON.parse(localStorage.getItem('users')) || [];

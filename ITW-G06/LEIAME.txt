@@ -4,18 +4,48 @@ Oujie Wu 62228
 Jiayi Li 62244
 Adriano Neves 62242
 
-Oujie Wu constribuiu com:
+O projeto apresenta se com todos os requisitos essenciais excepto a lógica dos 10 melhores tempos (.js) e o ajuste automático em todas as páginas excepto: shop.html,homepage.html,leaderboard.html,gameplayhistory.html,login.html,register.html,profile.html.
+
+O projeto tem como funcionalidades adicionais uma versão do jogo com diferentes imagens; a manipulação direta das cartas com o cursor do rato; animações; música; sons; modo multijogador (2 jogadores); modo de jogo trio; e é possível definir o tempo do jogo para jogar (contribuindo assim para corrida contra o tempo).
+
+
+Oujie Wu constribuiu com :
+Ajudou a completar todos .js do projeto
+Gamepage1V1.html
+gamepage1V1.js
+Gamepage2.html
+gamepage2.js
+gamepageTRIO.html
+gamepageTRIO.js
+gameplayHistory.html
+gameplayHistory.js
 HomePage.html
-Homepage.css
-GamePage.html
-gamepage.css
+homepage.js
+index.bundle.js
+gamepage1V1.css
+gamepage2.css
+gamepageTRIO.css
+gameplayHistory.css
+homepage.css
+index.bundle.css
+gamepage2 pokemon.css
+gamepage2 pokemon.js
+Gamepage2 pokemon.html
+register.js
+styleLeaderboard.css
 
 Jiayi Li contribuiu com:
-Login.html
-Login.css
-shop.html
-shop.css
+login.html
+login.css
+login.js
+register.html
+register.css
+
+
 
 Adriano Neves contribuiu com:
 leaderboard.html
-styleLeaderboard.css
+leaderboard.js
+profile.html
+profile.css
+profile.js
