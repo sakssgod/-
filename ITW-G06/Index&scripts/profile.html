@@ -6,7 +6,8 @@
     <title>Gameplayed History</title>
     <link rel="stylesheet" href="../styles/index.bundle.css">
     <link rel="stylesheet" href="../styles/gamepage2.css">
-    <link rel="stylesheet" href="../styles/gameplayHistory.css">
+    <link rel="stylesheet" href="../styles/profile.css">
+    <script src="profile.js"></script>
     <script src="gameplayHistory.js"></script>
 </head>
 <body>
@@ -41,8 +42,63 @@
     <div class="imagem"> </div>
 
 
+    <div class="profile-container">
+        <h2 style="text-align:center;">Basic Information</h2>
+        <table class="profile-table">
+            <tr>
+                <th>Item</th>
+                <th>Information</th>
+                <th>Action</th>
+            </tr>
+            <tr>
+                <td>Avatar</td>
+                <td><img id="userAvatar" src="" alt="User Avatar" class="avatar"></td>
+                <td><button class="edit-btn">Edit</button></td>
+            </tr>
+            <tr>
+                <td>Account</td>
+                <td id="userAccount"></td>
+                <td><button class="edit-btn">Edit</button></td>
+            </tr>
+            <tr>
+                <td>Date of Birth</td>
+                <td id="userDob"></td>
+                <td><button class="edit-btn">Edit</button></td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td id="userGender"></td>
+                <td><button class="edit-btn">Edit</button></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td>
+                    <span id="userPassword">********</span>
+                    <button class="toggle-password" onclick="togglePassword()">👁️</button>
+                </td>
+                <td><button class="edit-btn">Edit</button></td>
+            </tr>
+        </table>
 
-
+        <h2 style="text-align:center;">Contact Information</h2>
+        <table class="contact-table">
+            <tr>
+                <th>Item</th>
+                <th>Information</th>
+                <th>Action</th>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td id="userEmail"></td>
+                <td><button class="edit-btn">Edit</button></td>
+            </tr>
+            <tr>
+                <td>Phone</td>
+                <td id="userPhone">939 050 474</td>
+                <td><button class="edit-btn">Edit</button></td>
+            </tr>
+        </table>
+    </div>
 
 </body>
 <script src="https://unpkg.com/petite-vue"></script>
