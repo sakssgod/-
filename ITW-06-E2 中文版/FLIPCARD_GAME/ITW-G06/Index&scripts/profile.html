@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gameplayed History</title>
+    <link rel="stylesheet" href="../styles/index.bundle.css">
+    <link rel="stylesheet" href="../styles/gamepage2.css">
+    <link rel="stylesheet" href="../styles/profile.css">
+    <script src="profile.js"></script>
+    <script src="gameplayHistory.js"></script>
+</head>
+<body>
+
+    <nav>
+        <div class="menu">
+            <div class="logo">
+                <a href="HomePage.html">FLIP CARD GAME</a>
+            </div>
+
+            <ul>
+                <!-- <li><a href="#">About</a></li>-->
+                <li class="normal-menu"><a href="shop.html">Shop</a></li>
+                <li class="normal-menu"><a href="Gamepage2.HTML">MODE NORMAL</a></li>
+                <li class="normal-menu"><a href="gamepageTRIO.HTML">MODE TRIO</a></li>
+                <li class="normal-menu"><a href="Gamepage1V1.HTML">MODE 1V1</a></li>
+                <li class="normal-menu"><a href="leaderboard.html">Raking</a></li>
+                <li class="normal-menu"><a href="gameplayHistory.html" id="gameplayHistoryMenu">Gameplay History</a></li>
+                <li class="normal-menu"><a href="profile.html" id="profileMenu">Profile</a></li>
+                <li class="normal-menu" id="signInMenu"><a href="Login.html">Sign In</a></li> 
+                <li class="normal-menu" id="logoutMenu" style="display:none;"><a href="#" id="logoutButton">Logout</a></li> 
+                  <li class="normal-menu" id="userProfile" style="display:none;">
+                    <img id="userAvatar" class="user-avatar" src="" alt="User Avatar">
+                    <span id="userName" class="playernameloggedin">Guest</span>
+                </li> 
+                <li class="menu-icon"></li>
+            </ul>
+        </div>
+        
+    </nav>
+
+    <div class="imagem"> </div>
+
+
+    <div class="profile-container">
+        <h2 style="text-align:center;">Basic Information</h2>
+        <table class="profile-table">
+            <tr>
+                <th>Item</th>
+                <th>Information</th>
+                <th>Action</th>
+            </tr>
+            <tr>
+                <td>Avatar</td>
+                <td><img id="userAvatar" src="" alt="User Avatar" class="avatar"></td>
+                <td><button class="edit-btn">Edit</button></td>
+            </tr>
+            <tr>
+                <td>Account</td>
+                <td id="userAccount"></td>
+                <td><button class="edit-btn">Edit</button></td>
+            </tr>
+            <tr>
+                <td>Age</td>
+                <td id="userDob"></td>
+                <td><button class="edit-btn">Edit</button></td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td id="userGender"></td>
+                <td><button class="edit-btn">Edit</button></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td>
+                    <span id="userPassword">********</span>
+                    <button class="toggle-password" onclick="togglePassword()">👁️</button>
+                </td>
+                <td><button class="edit-btn">Edit</button></td>
+            </tr>
+        </table>
+
+        <h2 style="text-align:center;">Contact Information</h2>
+        <table class="contact-table">
+            <tr>
+                <th>Item</th>
+                <th>Information</th>
+                <th>Action</th>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td id="userEmail"></td>
+                <td><button class="edit-btn">Edit</button></td>
+            </tr>
+            <tr>
+                <td>Phone</td>
+                <td id="userPhone">939 050 474</td>
+                <td><button class="edit-btn">Edit</button></td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+<script src="https://unpkg.com/petite-vue"></script>
+<script src="index.bundle.js"></script>
+<!-- 然后加载 script.js -->
+<script src="homepage.js"></script>
+
+</html>

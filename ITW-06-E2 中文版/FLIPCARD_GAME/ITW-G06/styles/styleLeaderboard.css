@@ -1,0 +1,300 @@
+/* itw-2023/2024
+grupo:06
+jiayi li 62244 PL25
+Oujie Wu 62228 PL25
+Adriano Neves 62242 PL21 */
+
+* {
+  font-size: 75%;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url('../images/1222945.jpg'); /* 替换为您的背景图路径 */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ranking-section {
+  width: 45%;
+  background-color: rgba(255, 255, 255, 0.8); /* 添加透明背景以便背景图可见 */
+  -webkit-box-shadow: 0px 5px 15px 8px #e4e7fb;
+  box-shadow: 0px 5px 15px 8px #e4e7fb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0.5rem;
+  overflow: hidden; /* 隐藏溢出内容 */
+}
+
+#header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 1rem;
+}
+
+h1 {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.5rem;
+  color: #141a39;
+  text-transform: uppercase;
+  cursor: default;
+}
+
+#leaderboard {
+  width: 100%;
+  position: relative;
+  height: 100%; /* Ensure the leaderboard fills the remaining space */
+}
+
+.table-container {
+  overflow: auto;
+  height: calc(100% - 8rem); /* Adjust height based on header and button space */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  color: #141a39;
+  cursor: default;
+}
+
+tr {
+  transition: all 0.2s ease-in-out;
+  border-radius: 0.2rem;
+}
+
+tr:not(:first-child):hover {
+  background-color: #fff;
+  transform: scale(1.1);
+  -webkit-box-shadow: 0px 5px 15px 8px #e4e7fb;
+  box-shadow: 0px 5px 15px 8px #e4e7fb;
+}
+
+tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+tr:nth-child(1) {
+  color: #fff;
+}
+
+td {
+  height: 3rem;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  position: relative;
+}
+
+.number {
+  width: 2rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+.name {
+  text-align: left;
+  font-size: 1rem;
+}
+
+.time {
+  text-align: left;
+  font-size: 1.1rem;
+}
+
+.wins {
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-align: right;
+}
+
+.points {
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-align: right;
+}
+
+.ribbon {
+  width: 100%;
+  height: 3.5rem;
+  top: 0;
+  background-color: #5c5be5;
+  position: absolute;
+  left: 0;
+  -webkit-box-shadow: 0px 15px 11px -6px #7a7a7d;
+  box-shadow: 0px 15px 11px -6px #7a7a7d;
+}
+
+.ribbon::before,
+.ribbon::after {
+  content: "";
+  height: 1.5rem;
+  width: 1.5rem;
+  bottom: -0.8rem;
+  transform: rotate(45deg);
+  background-color: #5c5be5;
+  position: absolute;
+  z-index: -1;
+}
+
+.ribbon::before {
+  left: 0.35rem;
+}
+
+.ribbon::after {
+  right: 0.35rem;
+}
+
+#buttons {
+  width: 100%;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.exit,
+.continue {
+  width: 8rem;
+  height: 2.5rem;
+  font-family: "Rubik", sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.exit {
+  color: #7e7f86;
+  background-color: #fff;
+  border: 0.1rem solid #5c5be5;
+}
+
+.continue {
+  color: #fff;
+  background-color: #5c5be5;
+  border: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.highlight-row {
+  background-color: blue; /* 设置背景颜色为蓝色 */
+  color: yellow; /* 设置字体颜色为黄色 */
+}
+
+
+nav{
+  position: fixed;
+  width: 100%;
+  padding: 10px 0 ;
+  z-index: 10;
+  top: 0%;
+  font-size: xx-large;
+}
+
+nav .menu{
+  /* max-width: 1250px; */
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 100px;
+}
+.menu .logo{
+  text-align: left;
+}
+.menu .logo a{
+  text-decoration: none;
+  color: white;
+  font-size: 1.6em;
+  font-weight: 550;
+}
+
+.menu ul{
+  display: inline-flex;
+
+}
+
+.menu ul li{
+  list-style: none;
+  margin-left: 1em;
+}
+
+.menu ul li:first-child{
+  margin-left: 0px;
+}
+
+.menu ul li a{
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: all 0,3 ease;
+  background-color: rgb(80, 77, 78);
+}
+
+.menu ul li a:hover{
+  background-color: white;
+  color: black;
+
+}
+
+.menu-icon {
+  display: none; /* 确保菜单图标是隐藏的 */
+}
+
+
+@media (max-width: 740px) {
+  * {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 500px) {
+  * {
+    font-size: 35%;
+  }
+}
+
+@media (max-width: 390px) {
+  * {
+    font-size: 30%;
+  }
+}
