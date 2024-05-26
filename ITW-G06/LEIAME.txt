@@ -4,7 +4,7 @@ Oujie Wu 62228
 Jiayi Li 62244
 Adriano Neves 62242
 
-O projeto apresenta se com todos os requisitos essenciais excepto a lógica dos 10 melhores tempos (.js) e o ajuste automático em todas as páginas excepto: shop.html,homepage.html,leaderboard.html,gameplayhistory.html,login.html,register.html,profile.html.
+O projeto apresenta se com todos os requisitos essenciais excepto a lógica dos 10 melhores tempos/erros/pontos apenas impime os status do jogar logado (.js) e o ajuste automático em todas as páginas excepto: shop.html,homepage.html,leaderboard.html,gameplayhistory.html,login.html,register.html,profile.html.
 
 O projeto tem como funcionalidades adicionais uma versão do jogo com diferentes imagens; a manipulação direta das cartas com o cursor do rato; animações; música; sons; modo multijogador (2 jogadores); modo de jogo trio; e é possível definir o tempo do jogo para jogar (contribuindo assim para corrida contra o tempo).
 
@@ -33,6 +33,10 @@ gamepage2 pokemon.js
 Gamepage2 pokemon.html
 register.js
 styleLeaderboard.css
+index.html
+scrips.js
+leaderboard.js (half)
+
 
 Jiayi Li contribuiu com:
 login.html
@@ -45,7 +49,7 @@ register.css
 
 Adriano Neves contribuiu com:
 leaderboard.html
-leaderboard.js
+leaderboard.js (half)
 profile.html
 profile.css
 profile.js

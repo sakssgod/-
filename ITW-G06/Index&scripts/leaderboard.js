@@ -1,7 +1,13 @@
+/* itw-2023/2024
+grupo:06
+jiayi li 62244 PL25
+Oujie Wu 62228 PL25
+Adriano Neves 62242 PL21 */
+
 // 读取local storage中的数据
 const gameDataString = localStorage.getItem('gameData');
 const trioGameDataString = localStorage.getItem('trioGameData');
-
+const valuename = localStorage.getItem("loggedInUser")
 // 检查数据是否存在
 if (gameDataString && trioGameDataString) {
     // 解析JSON字符串为对象
@@ -42,13 +48,14 @@ if (gameDataString && trioGameDataString) {
 function editCell(){
     var points = document.querySelector("#n1.points");
     var time = document.querySelector("#n1.time");
-    var errors = document.querySelector("#n1.wins")
+    var errors = document.querySelector("#n1.wins");
+    var name = document.querySelector("#n1.name")
     var dataObject = JSON.parse(gameDataString);
-    var dataArray=[]
-
-    points.innerHTML=dataObject["dridri"][0].points;
-    time.innerHTML=dataObject["dridri"][0].timePassed;
-    errors.innerHTML =dataObject["dridri"][0].errors;
+    
+    name.innerHTML=valuename
+    points.innerHTML=dataObject[valuename][0].points;
+    time.innerHTML=dataObject[valuename][0].timePassed;
+    errors.innerHTML =dataObject[valuename][0].errors;
     
     
     

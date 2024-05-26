@@ -1,3 +1,9 @@
+/* itw-2023/2024
+grupo:06
+jiayi li 62244 PL25
+Oujie Wu 62228 PL25
+Adriano Neves 62242 PL21 */
+
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('loginForm').addEventListener('submit', function(event) {
         event.preventDefault();
@@ -20,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    //删除用户信息
+    //delte user information."
     document.getElementById('deleteUserForm').addEventListener('submit', function(event) {
         event.preventDefault();
 
@@ -40,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('deleteUserForm').reset();
     });
 
-    //显示用户信息
+    //Display user information
     function displayUsers() {
         const users = JSON.parse(localStorage.getItem('users')) || [];
         const userList = document.getElementById('userList');
